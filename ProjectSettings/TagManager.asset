@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: drebes
+    uniqueID: 2634185261
+    locked: 0
+  - name: teli
+    uniqueID: 3381297001
+    locked: 0
