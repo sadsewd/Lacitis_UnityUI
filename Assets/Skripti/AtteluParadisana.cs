@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class AtteluParadisana : MonoBehaviour
 {
+    int skait = 0;
+    public AudioSource skanasAvots;
+    public AudioClip skanaKoAtskanotM;
+    public AudioClip skanaKoAtskanotV;
     public GameObject BruniApaviM;
     public GameObject ZaliZabakiM;
     public GameObject SarkanasBotesM;
@@ -172,6 +176,7 @@ public void KleitasM(bool vert)
     {
         if (skaitlis == 0)
         {
+            skait = 0;
             mainigaisAttels.GetComponent<Image>().sprite = atteluMasivs[0];
             VirsjakaMT.SetActive(true);
             KleitasMT.SetActive(true);
@@ -202,6 +207,7 @@ public void KleitasM(bool vert)
         }
         else if (skaitlis == 1)
         {
+            skait = 1;
             mainigaisAttels.GetComponent<Image>().sprite = atteluMasivs[1];
             VirsjakasVT.SetActive(true);
             KleitasMT.SetActive(false);
@@ -231,5 +237,22 @@ public void KleitasM(bool vert)
             AugsdalaVT.GetComponent<Toggle>().isOn = false;
             ApaviVT.GetComponent<Toggle>().isOn = false;
         }
+    }
+    public void uzbiditsUzAttelaM()
+    {
+        if(skait == 0)
+        {
+            skanasAvots.PlayOneShot(skanaKoAtskanotM);
+        }
+        else if (skait == 1)
+        {
+            skanasAvots.PlayOneShot(skanaKoAtskanotV);
+
+        }
+    }
+
+    public void kursorsNoietNoAttela()
+    {
+        skanasAvots.Stop();
     }
 }
