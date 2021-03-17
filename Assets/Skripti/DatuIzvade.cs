@@ -15,7 +15,7 @@ public class DatuIzvade : MonoBehaviour
     {
         vecums = vecumaLauks.GetComponent<Text>().text;
         teksts = tekstaLauks.GetComponent<Text>().text;
-        tekstaAttelosana.GetComponent<Text>().text = teksts+" ir "+vecums+" gadus vecs!";
+        tekstaAttelosana.GetComponent<Text>().text = teksts+" ir "+vecums+" gadus vecs/a!";
     }
 
 }

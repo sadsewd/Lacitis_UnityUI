@@ -77,6 +77,10 @@ public class AtteluParadisana : MonoBehaviour
     public GameObject ApaksdalaVT;
     public GameObject AugsdalaVT;
     public GameObject ApaviVT;
+    public GameObject sliderP;
+    public GameObject sliderG;
+    
+
 
     public void VirsjakasM(bool vert)
     {
@@ -254,5 +258,18 @@ public void KleitasM(bool vert)
     public void kursorsNoietNoAttela()
     {
         skanasAvots.Stop();
+    }
+
+    public void mainitPlatumu()
+    {
+        float pasreizejaVertiba = sliderG.GetComponent<Slider>().value;
+        float pasreizejaVertiba1 = sliderP.GetComponent<Slider>().value;
+        mainigaisAttels.transform.localScale = new Vector3(1F * pasreizejaVertiba1, pasreizejaVertiba, 1);
+    }
+    public void mainitGarumu()
+    {
+        float pasreizejaVertiba1 = sliderP.GetComponent<Slider>().value;
+        float pasreizejaVertiba = sliderG.GetComponent<Slider>().value;
+        mainigaisAttels.transform.localScale = new Vector3(pasreizejaVertiba1, 1F * pasreizejaVertiba, 1);
     }
 }
